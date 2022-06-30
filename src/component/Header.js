@@ -11,7 +11,7 @@ const Header = () => {
           Completed Task
         </Link>
         <Link to="/calender" className="mx-20 my-5">
-          Calender
+          Calendar
         </Link>
       </div>
     </div>
