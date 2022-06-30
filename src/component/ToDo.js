@@ -26,7 +26,7 @@ const ToDo = () => {
             type="text"
             name="task"
             placeholder="Add new Task"
-            className="p-3 bg-gray-200 w-96"
+            className="p-3 bg-gray-200 w-96 rounded"
           />
           <input
             type="submit"
