@@ -1,20 +1,30 @@
-import axios from "axios";
-import { useState } from "react";
 import AllTodo from "./AllTodo";
 
 const ToDo = () => {
-  const [task, setTask] = useState("");
+  const submitHandler = (event) => {
+    event.preventDefault();
+    const todo = event.target.task.value;
+    console.log(todo);
+    const task = { todo };
 
-  const submitHandler = () => {
-    axios.post();
+    fetch("http://localhost:5000/todo", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(task),
+    })
+      .then((res) => res.json())
+      .then((data) => {});
+    event.target.reset();
   };
   return (
     <div>
-      <div className="m-20">
+      <div className="flex justify-center my-20" >
         <form onSubmit={submitHandler}>
           <input
-            onChange={(e) => setTask(e.target.value)}
             type="text"
+            name="task"
             placeholder="Add new Task"
             className="p-3 bg-gray-200 w-96"
           />
