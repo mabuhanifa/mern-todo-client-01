@@ -4,7 +4,6 @@ const ToDo = () => {
   const submitHandler = (event) => {
     event.preventDefault();
     const todo = event.target.task.value;
-    console.log(todo);
     const task = { todo };
 
     fetch("http://localhost:5000/todo", {

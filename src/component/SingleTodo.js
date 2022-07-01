@@ -10,7 +10,7 @@ const SingleTodo = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => setSingleTodo(data));
-  }, [id,singleTodo]);
+  }, [id]);
   const submitHandler = (e) => {
     e.preventDefault();
     const desc = e.target.description.value;

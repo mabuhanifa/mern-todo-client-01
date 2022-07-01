@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div>
-      <div className="flex justify-around items-center text-2xl font-andada m-2 bg-[#1a1a1a] text-gray-100 rounded-lg">
+      <div className="flex justify-around items-center text-2xl font-andada text-gray-100 rounded-lg">
         <Link to="/todo" className="mx-20 my-5">
           To-Do
         </Link>

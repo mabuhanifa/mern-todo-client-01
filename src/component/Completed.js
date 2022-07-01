@@ -11,11 +11,11 @@ const Completed = () => {
       setCompleted(res.data);
     };
     fetchTodo();
-  }, [completed]);
+  }, []);
   return <div>
   <div>
-    {completed.map((complete) => {
-      return <CompletedList key={complete.id} complete={complete} />;
+    {completed.map((completed) => {
+      return <CompletedList key={completed._id} completed={completed} />;
     })}
   </div>
 </div>
