@@ -28,7 +28,7 @@ const TodoList = ({ todo }) => {
     deleteItem(todo._id);
   };
   return (
-    <div className="my-2 bg-[#DCD7C9] mx-40 rounded-lg flex relative">
+    <div className="my-2 bg-[#fff] mx-40 rounded-lg flex relative">
       <button
         onClick={handleComplete}
         className="h-14 mx-5 flex items-center text-2xl text-green-500"

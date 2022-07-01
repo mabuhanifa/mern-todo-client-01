@@ -26,12 +26,12 @@ const ToDo = () => {
             type="text"
             name="task"
             placeholder="Add new Task"
-            className="p-3 bg-gray-200 w-96 rounded"
+            className="p-2.5 bg-[#eceeef] w-96 rounded"
           />
           <input
             type="submit"
             value="Add new Task"
-            className="btn btn-primary mx-5"
+            className="btn bg-[#8A9196] mx-5 text-black hover:bg-white "
           />
         </form>
       </div>
