@@ -1,21 +1,34 @@
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 
 const SingleTodo = () => {
   const { id } = useParams();
   const [singleTodo, setSingleTodo] = useState();
-  console.log(singleTodo);
+  console.log(id,singleTodo);
 
   useEffect(() => {
-    const fetchTodo = async () => {
-      const res = await axios.get(`http://localhost:5000/todo${id}`);
-      setSingleTodo(res.data);
-    };
-    fetchTodo();
-  }, [singleTodo, id]);
+    const url = `http://localhost:5000/todo/${id}`;
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => setSingleTodo(data));
+  }, [id]);
+  const submitHandler = () =>{
 
-  return <div>hi</div>;
+  };
+
+  return <div>
+
+    <div>
+        <form onSubmit={submitHandler}>
+            
+
+
+
+
+        </form>
+    </div>
+    
+  </div>;
 };
 
 export default SingleTodo;

@@ -37,7 +37,7 @@ const TodoList = ({ todo }) => {
       </button>
       <p className="h-14 px-5 flex items-center ">{todo.todo}</p>
       <Link
-        to={`/todo/:${todo._id}`}
+        to={`/todo/${todo._id}`}
         className="h-14 mx-5 flex items-center text-2xl absolute right-10 text-red-900"
       >
         <FiEdit />
