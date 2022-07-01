@@ -12,7 +12,6 @@ const AllTodo = () => {
     };
     fetchTodo();
   }, [todo]);
-  console.log(todo);
   return (
     <div>
       <div>

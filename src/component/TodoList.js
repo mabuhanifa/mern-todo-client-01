@@ -1,5 +1,6 @@
-import { BsCheck2Square } from "react-icons/bs";
+import { BsCheckSquareFill } from "react-icons/bs";
 import { FiEdit } from "react-icons/fi";
+import { Link } from "react-router-dom";
 const TodoList = ({ todo }) => {
   const deleteItem = (id) => {
     const proceed = window.confirm(
@@ -30,14 +31,17 @@ const TodoList = ({ todo }) => {
     <div className="my-2 bg-[#DCD7C9] mx-40 rounded-lg flex relative">
       <button
         onClick={handleComplete}
-        className="h-14 mx-5 flex items-center text-xl"
+        className="h-14 mx-5 flex items-center text-2xl text-green-500"
       >
-        <BsCheck2Square />
+        <BsCheckSquareFill />
       </button>
-      <p className="h-14 px-5 flex items-center">{todo.todo}</p>
-      <button className="h-14 mx-5 flex items-center text-xl absolute right-10">
+      <p className="h-14 px-5 flex items-center ">{todo.todo}</p>
+      <Link
+        to={`/todo/:${todo._id}`}
+        className="h-14 mx-5 flex items-center text-2xl absolute right-10 text-red-900"
+      >
         <FiEdit />
-      </button>
+      </Link>
     </div>
   );
 };
