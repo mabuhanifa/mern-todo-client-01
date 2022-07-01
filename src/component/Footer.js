@@ -1,20 +1,20 @@
 
 const Footer = () => {
     return (
-        <footer className="footer p-10 bg-base-300 text-base-content max-w-7xl mx-auto rounded">
+        <footer className="footer p-10 bg-base-300 text-base-content max-w-7xl mx-auto rounded ">
   <div>
-    <span className="footer-title">Services</span> 
-    <a className="link link-hover">Branding</a> 
-    <a className="link link-hover">Design</a> 
-    <a className="link link-hover">Marketing</a> 
-    <a className="link link-hover">Advertisement</a>
+    <span className="footer-title" href="">Services</span> 
+    <a className="link link-hover" href="">Branding</a> 
+    <a className="link link-hover" href="">Design</a> 
+    <a className="link link-hover" href="">Marketing</a> 
+    <a className="link link-hover" href="">Advertisement</a>
   </div> 
   <div>
     <span className="footer-title">Company</span> 
-    <a className="link link-hover">About us</a> 
-    <a className="link link-hover">Contact</a> 
-    <a className="link link-hover">Jobs</a> 
-    <a className="link link-hover">Press kit</a>
+    <a className="link link-hover" href="">About us</a> 
+    <a className="link link-hover" href="">Contact</a> 
+    <a className="link link-hover" href="">Jobs</a> 
+    <a className="link link-hover" href="">Press kit</a>
   </div> 
   <div>
     <span className="footer-title">Social</span> 

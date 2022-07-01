@@ -7,12 +7,12 @@ const Completed = () => {
 
   useEffect(() => {
     const fetchTodo = async () => {
-      const res = await axios.get("http://localhost:5000/completed");
+      const res = await axios.get("https://degrassi-moose-90311.herokuapp.com/completed");
       setCompleted(res.data);
     };
     fetchTodo();
   }, []);
-  return <div>
+  return <div className="py-20">
   <div>
     {completed.map((completed) => {
       return <CompletedList key={completed._id} completed={completed} />;

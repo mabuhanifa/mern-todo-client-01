@@ -10,7 +10,7 @@ import ToDo from "./component/ToDo";
 function App() {
   return (
     <>
-      <div className="max-w-7xl mx-auto bg-[#272B30] h-screen rounded-lg">
+      <div className="max-w-7xl mx-auto bg-[#272B30] min-h-screen h-full rounded-lg pb-10">
         <Header></Header>
         <Routes>
           <Route path="/" element={<Home />} />

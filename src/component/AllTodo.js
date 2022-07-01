@@ -7,7 +7,9 @@ const AllTodo = () => {
 
   useEffect(() => {
     const fetchTodo = async () => {
-      const res = await axios.get("http://localhost:5000/todo");
+      const res = await axios.get(
+        "https://degrassi-moose-90311.herokuapp.com/todo"
+      );
       setTodo(res.data);
     };
     fetchTodo();
@@ -16,7 +18,7 @@ const AllTodo = () => {
     <div>
       <div>
         {todo.map((todo) => {
-          return <TodoList key={todo.id} todo={todo} />;
+          return <TodoList key={todo._id} todo={todo} />;
         })}
       </div>
     </div>

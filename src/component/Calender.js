@@ -6,9 +6,8 @@ const Calender = () => {
   const [date, setDate] = useState(new Date());
   
   return (
-    <div className="text-gray-700 w-96 mx-auto bg-white p-10">
+    <div className="text-gray-700 w-96 mx-auto bg-white p-10 my-20">
       <Calendar onChange={setDate} value={date} />
-      {console.log(date)}
       {date.toString()}
     </div>
   );
