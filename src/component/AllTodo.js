@@ -16,11 +16,15 @@ const AllTodo = () => {
   }, [todo]);
   return (
     <div>
-      <div>
-        {todo.map((todo) => {
-          return <TodoList key={todo._id} todo={todo} />;
-        })}
-      </div>
+      {todo ? (
+        <div>
+          {todo.map((todo) => {
+            return <TodoList key={todo._id} todo={todo} />;
+          })}
+        </div>
+      ) : (
+        <h2 className="text-2xl font bold">Loading ....</h2>
+      )}
     </div>
   );
 };

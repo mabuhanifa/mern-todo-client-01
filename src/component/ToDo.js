@@ -2,7 +2,10 @@ import AllTodo from "./AllTodo";
 
 const ToDo = () => {
   const submitHandler = (event) => {
-    if (event) {
+    if (event.target.task.value === " ") {
+      return;
+    }
+   else if (event) {
       event.preventDefault();
       const todo = event.target.task.value;
       const task = { todo };
@@ -30,7 +33,11 @@ const ToDo = () => {
             className="p-2.5 bg-[#eceeef] w-80  sm:w-96 rounded mx-auto"
             onKeyPress={(event) => {
               if (event.key === "Enter") {
-                submitHandler();
+                if (event.target.value === " ") {
+                  return;
+                } else {
+                  submitHandler(event.target.value);
+                }
               }
             }}
           />
